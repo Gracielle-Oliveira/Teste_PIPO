@@ -1,0 +1,25 @@
+table.mat-table{
+    width: 98%;
+    margin: 0 2% 0 1%;
+}
+
+.btn {
+    text-align: center;
+  }
+  
+
+:host ::ng-deep {
+    .mat-form-field-wrapper{
+        margin-left: 20%;
+    }
+
+    .mat-stroked-button.mat-accent {
+        background-color: #1139b0;
+        margin-top: 2%;
+        color: #fff;
+        margin-bottom: 2%;
+        align-self: center;
+        width: 50%;
+        text-align: center;
+      }
+}

@@ -1,0 +1,19 @@
+:host ::ng-deep {
+
+    .mat-card{
+        margin-top: 5%;
+        width: 50%;
+        text-align: center;
+        display: grid;
+        height: 80%;
+        left: 22%;
+        background-color: #1139b0;
+        color: #fff;
+        padding-top: 5%
+    }
+
+    .mat-stroked-button{
+        background-color: #ffd9e9;
+        color:#1139b0
+    }
+}

@@ -1,0 +1,35 @@
+.container {
+  margin-top: 2%;
+}
+
+.mat-card {
+  background-color: #1139b0;
+  margin: 2%;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+}
+
+.btn {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+:host ::ng-deep {
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: #fff;
+  }
+
+  .mat-stroked-button.mat-accent {
+    background-color: #ffd9e9;
+    color: #1139b0;
+    margin-bottom: 2%;
+    align-self: center;
+    width: 20%;
+    justify-content: space-between;
+  }
+}

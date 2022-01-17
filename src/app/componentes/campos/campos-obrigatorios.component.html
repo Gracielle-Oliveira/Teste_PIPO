@@ -1,0 +1,58 @@
+<div class="container">
+    <mat-card>
+    <div *ngFor="let campos of resultado">
+        <div class="inputs">
+        <mat-form-field appearance="fill" *ngIf="campos == nome">
+            <mat-label>Nome</mat-label>
+            <input matInput placeholder="Nome completo" formNameControl="nome" required>
+            <mat-error *ngIf="nome.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>CPF</mat-label>
+            <input matInput placeholder="000.000.000-00" formNameControl="cpf" required>
+            <mat-error *ngIf="cpf.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>Data de Admissão</mat-label>
+            <input matInput placeholder="00/00/0000" formNameControl="data" required>
+            <mat-error *ngIf="data.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="exemplo@examplo.com" formNameControl="email" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    
+    <div class="inputs">
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>Endereço</mat-label>
+            <input matInput placeholder="Rua exemplo, 111" formNameControl="endereco" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>Peso(kg)</mat-label>
+            <input matInput placeholder="peso kg" formNameControl="peso" required >
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" *ngIf="campos">
+            <mat-label>Altura(cm)</mat-label>
+            <input matInput placeholder="altura cm" formNameControl="altura" required>
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="fill" >
+            <mat-label>CPF Horas meditadas nos últimos 7 dias</mat-label>
+            <input matInput placeholder="exemplo@examplo.com" formNameControl="horas" required >
+            <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+        </mat-form-field>
+    </div>
+    <div class="btn">
+        <button mat-stroked-button color="accent" (click)="voltar()">Voltar</button>
+        <button mat-stroked-button color="accent" (click)="salvar()">Salvar</button>
+    </div>
+    </div>
+    </mat-card>
+</div>

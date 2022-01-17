@@ -1,0 +1,21 @@
+<mat-card>
+    <div>
+        <input type="radio" [checked]="checkedNorte" (click)="norte()">
+        <span>Plano de saúde Norte Europa</span>
+    </div>
+    <div>
+        <input type="radio" [checked]="checkedPampulha" (click)="pampulha()">
+        <span>Plano de saúde Pampulha Intermédica</span>
+    </div>
+    <div>
+        <input type="radio" [checked]="checkedDental" (click)="dental()">
+        <span>Plano odontológico Dental Sorriso</span>
+    </div>
+    <div>
+        <input type="radio" [checked]="checkedMental" (click)="mental()">
+        <span>Plano de saúde mental Mente Sã</span>
+    </div>
+    <div class="btn">
+        <button mat-stroked-button color="accent" (click)="prosseguir()" >Prosseguir</button>
+    </div>
+</mat-card>
