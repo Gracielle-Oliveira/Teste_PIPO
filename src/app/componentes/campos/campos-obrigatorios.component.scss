@@ -5,18 +5,30 @@
 .mat-card {
   background-color: #1139b0;
   margin: 2%;
+  width: 50%;
+  left: 20%;
+  padding: 5%;
 }
 
 .inputs {
   display: flex;
-  justify-content: space-between;
-  padding: 3%;
+  flex-direction: column;
 }
 
 .btn {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  margin-top: 5%;
+}
+
+.error{
+  border: 5px solid transparent;
+  background-color: transparent;
+  z-index: 1;
+  color: red;
+  font-size: initial;
+  font-weight: bold;
 }
 
 :host ::ng-deep {

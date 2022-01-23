@@ -10,7 +10,7 @@ import { RotasModule } from '../app/rotas/rotas/rotas.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,

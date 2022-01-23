@@ -14,6 +14,7 @@ export class PlanosComponent implements OnInit {
   public checkedMental = false;
   public checkedNorte = false;
   public checkedPampulha = false;
+  seguir : boolean = false;
      
 
   constructor( private route: Router) { }
@@ -54,6 +55,5 @@ export class PlanosComponent implements OnInit {
     this.route.navigate(['/campos'])
   }
   
-
 
 }

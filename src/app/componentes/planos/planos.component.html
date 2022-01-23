@@ -16,6 +16,6 @@
         <span>Plano de saúde mental Mente Sã</span>
     </div>
     <div class="btn">
-        <button mat-stroked-button color="accent" (click)="prosseguir()" >Prosseguir</button>
+        <button mat-stroked-button color="accent" (click)="prosseguir()" [attr.disabled]="seguir ? '' : null" >Prosseguir</button>
     </div>
 </mat-card>

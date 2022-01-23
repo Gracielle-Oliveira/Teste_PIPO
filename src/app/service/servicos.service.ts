@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { retry } from 'rxjs/operators';
-import { DataTable } from '../shared/data.model';
+import { DataTable, RespDados } from '../shared/data.model';
 
 @Injectable({
   providedIn: 'root'
@@ -10,14 +11,21 @@ export class ServicosService {
 
   constructor( private http: HttpClient) { }
 
-  url!: 'http://localhost:3000/dados';
+  url: string = 'http://localhost:3000/';
 
- salvarDados(dados: DataTable){
-   console.log(dados);
-   return this.http.post<DataTable>(this.url, dados)
-    .pipe(
-      retry(3)
-    )
- } 
+  getListar(): Observable<RespDados[]> {
+  	return this.http.get<RespDados[]>(this.url + 'dados');
+  }
+
+  salvarDados(dados: DataTable): Observable<any> {
+    return this.http.post(this.url + 'dados', dados)
+  }
+
+  // editar(id: string)
+
+  delete(id: string): Observable<any> {
+    const _url = `${this.url}/${id}`;
+    return this.http.delete<any>(_url)
+  }
  
 }
