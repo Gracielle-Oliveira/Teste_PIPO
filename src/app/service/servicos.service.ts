@@ -21,8 +21,6 @@ export class ServicosService {
     return this.http.post(this.url + 'dados', dados)
   }
 
-  // editar(id: string)
-
   delete(id: string): Observable<any> {
     const _url = `${this.url}/${id}`;
     return this.http.delete<any>(_url)
